@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>bork bork!</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+  <script src="/tilt.jquery.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+      background: linear-gradient(-45deg, #f72585, #5bc0be, #023e7d, #348aa7, #70d6ff);
+      background-size: 400% 400%;
+      animation: gradient 30s ease infinite;
+      color: white;
+    }
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+
+      .row.content {
+        height: auto;
+      }
+    }
+
+    .col-centered {
+      float: none;
+      margin: 0 auto;
+    }
+
+    .form {
+      background-color: white;
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .button {
+      background-color: rgb(0, 193, 218);
+      font: helvetica;
+      font-weight: 700;
+    }
+
+    .polaroid_border {
+      margin-top: 20px;
+      padding-top: 2%;
+      background: linear-gradient(-45deg, #f72585, #5bc0be, #023e7d, #348aa7, #70d6ff);
+      background-size: 100% 100%;
+      animation: gradient 40s ease infinite;
+
+    }
+
+    .polaroid {
+      font: Verdana;
+      /* -webkit-box-shadow: 3px 3px 3px #888;
+  -moz-box-shadow: 3px 3px 3px #888;
+  box-shadow: 7px 7px 5px rgb(207, 207, 207); */
+      /* border-style: solid; */
+      /* border-width: 0px 5px 5px 0px; */
+      /* border-color: white; */
+    }
+
+    .polaroid_img {
+      padding: 2%;
+      width: 100%;
+    }
+
+    .post_box {
+      background-color: linear-gradient(-45deg, blue, #defff8, #ffffff, #f8deff);
+      background-size: 400% 400%;
+      animation: gradient 30s ease infinite;
+      background-color: white;
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .post_text {
+      font: helvetica;
+      font-weight: 700;
+      height: 10%;
+      margin: 7px 5px 10px 5px;
+    }
+
+    .ig {
+      width: 324px;
+      height: 611px;
+    }
+
+    body {
+      background: linear-gradient(-45deg, white, #defff8, #ffffff, #f8deff);
+      background-size: 400% 400%;
+      animation: gradient 30s ease infinite;
+      font: helvetica;
+      font-weight: 700;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    #header {
+      background: linear-gradient(-45deg, #f72585, #5bc0be, #023e7d, #348aa7, #70d6ff);
+      background-size: 400% 400%;
+      animation: gradient 30s ease infinite;
+    }
+
+    #main {
+      margin-top: 80px;
+    }
+
+    .carousel img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+  <div id="header" class="navbar navbar-dark fixed-top navbar-expand-sm">
+    <a href="/"><img class="navbar-brand" src="/perm_images/dog_logo.png" width=50px></a>
+    <a class="navbar-brand" href="/">bork bork</a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+      <i class="fa fa-bars"></i>
+    </button>
+    <nav class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about" class="nav-link">About</a></li>
+        <li class="nav-item"> <a href="contact" class="nav-link">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav ml-auto">
+        <li class="dropdown nav-item"> <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Not Logged In</a>
+          <ul class="dropdown-menu dropdown-menu-right">
+            <li class="dropdown-item"><a href="/logout">Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+
+  <div id="main" class="container-fluid">
+    <div class="col-md-12"> 
+      
+      <a class="btn btn-lg btn-google btn-block text-uppercase btn-outline"
+        href="/auth/google"><img style="width:300px" src="/perm_images/google_logo.png"/></a>
+        <p style="text-align:center">First you need to login to access bork bork! </p>
+    </div>
+    <div id="demo" class="carousel slide col-12 col-lg-8 offset-lg-2" data-ride="carousel">
+
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
+
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/perm_images/1.png">
+        </div>
+        <div class="carousel-item">
+          <img src="/perm_images/2.jpeg">
+        </div>
+        <div class="carousel-item">
+          <img src="perm_images/3.png">
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <footer class="container-fluid text-center">
+      <p>bork! bork!</p><img src="/perm_images/footer.png" width=70px>
+    </footer>
+
+</body>
+
+</html>
